@@ -94,25 +94,3 @@ a.btn2 {
 
 </body>
 </html>
-<!-- <li><a href="/BoardWeb/login"><i class="fa fa-sign-in"></i> 로그인</a></li>
-				<li><a href="/BoardWeb/register/step1"><i class="fa fa-user"></i>회원가입</a></li>
-				<li><a href="/BoardWeb/board/boardList"><i class="fa fa-board"></i>글목록</a></li> -->
-<%-- </c:when>
-			<c:otherwise>
-				<c:choose>
-					<c:when test="${authInfo.serial eq '1' }">
-						<li>
-							<p>관리자 ${authInfo.name }님, 환영합니다.</p>
-						</li>
-						<li><a href="/BoardWeb/logout"><i class="fa fa-sign-out"></i> 로그아웃</a></li>
-					</c:when>
-					<c:otherwise>
-						<li>
-							<p>${authInfo.name }님,반갑습니다!</p>
-						</li>
-						<li><a href="/BoardWeb/logout"><i class="fa fa-sign-out"></i> 로그아웃</a></li>
-					</c:otherwise>
-				</c:choose>
-			</c:otherwise>
-		</c:choose>
-	</c:catch> --%>
