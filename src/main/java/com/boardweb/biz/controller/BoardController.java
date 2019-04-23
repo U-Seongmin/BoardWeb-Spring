@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
@@ -16,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.boardweb.biz.common.common.CommandMap;
 import com.boardweb.biz.service.BoardService;
-import com.boardweb.biz.util.AuthInfo;
 import com.boardweb.biz.vo.BoardVO;
 
 @Controller
@@ -45,14 +43,12 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/board/insertBoard", method = RequestMethod.POST)
-	public ModelAndView insertBoard(@Valid BoardVO boardVO, BindingResult bindingResult, HttpSession session) throws Exception{
+	public ModelAndView insertBoard(@Valid BoardVO boardVO, BindingResult bindingResult) throws Exception{
 		if (bindingResult.hasErrors()) {
 			ModelAndView mav = new ModelAndView("/board/boardWrite");
 			return mav;
 		}
 		ModelAndView mav = new ModelAndView("redirect:/board/boardList");
-		AuthInfo authInfo = (AuthInfo)session.getAttribute("authInfo");
-		System.out.println(authInfo.getName());
 		boardService.insertBoard(boardVO);
 		return mav;
 	}
