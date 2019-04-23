@@ -11,5 +11,6 @@ public interface BoardService {
 	List<Map<String, Object>> selectBoardList(CommandMap commandMap);
 
 	void insertBoard(BoardVO boardVO);
-
+	
+	BoardVO detailBoard(int serial);
 }

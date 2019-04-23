@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
@@ -50,6 +51,14 @@ public class BoardController {
 		}
 		ModelAndView mav = new ModelAndView("redirect:/board/boardList");
 		boardService.insertBoard(boardVO);
+		return mav;
+	}
+	
+	@RequestMapping(value = "/board/detailBoard", method = RequestMethod.GET)
+	public ModelAndView detailBoard(HttpServletRequest request)throws Exception{
+		BoardVO board = boardService.detailBoard(Integer.parseInt(request.getParameter("seq")));
+		ModelAndView mav = new ModelAndView("/board/detailBoard");
+		mav.addObject("board",board);
 		return mav;
 	}
 }

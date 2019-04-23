@@ -130,13 +130,16 @@ h1 {
 	font-family: 나눔스퀘어;
 	font-size: 50px;
 }
+div.title{
+	margin-top: 50px;
+}
 </style>
 </head>
 <body>
 	<div class="main">
 
 		<form id="boardForm" name="boardForm" method="post">
-			<div>
+			<div class="title">
 				<h1>게시판</h1>
 			</div>
 			<div>

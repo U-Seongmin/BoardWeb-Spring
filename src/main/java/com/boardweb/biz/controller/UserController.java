@@ -70,7 +70,7 @@ public class UserController {
 			return mav;
 		}
 
-		ModelAndView mav = new ModelAndView("/step3");
+		ModelAndView mav = new ModelAndView("redirect:/");
 		return mav;
 	}
 }

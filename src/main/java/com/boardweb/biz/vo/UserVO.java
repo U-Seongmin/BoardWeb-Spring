@@ -14,7 +14,7 @@ public class UserVO {
     @Pattern(regexp="\\w{2,16}", message="아이디를 2~16자로 입력해주세요.")
     private String id;
     @Column
-    @Pattern(regexp="\\S{2,8}", message="이름을 공백없이 2~6자로 입력해주세요.")
+    @Pattern(regexp="\\S{2,12}", message="이름을 공백없이 2~12자로 입력해주세요.")
     private String name;
     @Column
     @Size(min=4, max=12, message="비밀번호를 4~12자로 입력해주세요.")

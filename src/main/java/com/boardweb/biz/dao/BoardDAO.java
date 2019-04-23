@@ -20,5 +20,10 @@ public class BoardDAO extends AbstractDAO {
 	public void insertBoard(BoardVO boardVO) {
 		insert("board.insertBoard", boardVO);
 	}
+	
+	public BoardVO detailBoard(int serial) {
+		update("board.upCntBoard", serial);
+		return (BoardVO)selectOne("board.selectBoard", serial);
+	}
 
 }
