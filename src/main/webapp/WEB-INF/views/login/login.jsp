@@ -48,8 +48,10 @@ button {
 	border: none;
 	position: relative;
 	height: 60px;
-	font-size: 1.6em;
+	width:200px;
+	font-size: 1.4em;
 	padding: 0 2em;
+	margin: 5px 0;
 	cursor: pointer;
 	transition: 800ms ease all;
 	outline: none;
@@ -87,6 +89,10 @@ button:hover:before, button:hover:after {
 	text-align: center;
 	color: #FF0000;
 }
+.btns {
+	width: 180px;
+	margin: 0 auto;
+}
 </style>
 </head>
 <body>
@@ -111,23 +117,10 @@ button:hover:before, button:hover:after {
 				</div>
 				<div class="btns">
 					<button type="submit" class="login-btn">로그인</button>
+					<button type="button" onclick="location.href='/BoardWeb'" class="btn">취소하기</button>
 				</div>
 			</div>
 		</div>
 	</form:form>
 </body>
 </html>
-
-<%-- <form:form role="form" commandName="loginCommand" action="/BoardWeb/login" method="post">
-			<fieldset>
-				<div class="form-group">
-					<form:input type="text" class="form-control" placeholder="ID" path="id" />
-					<form:errors path="id" />
-				</div>
-				<div class="form-group">
-					<form:password class="form-control" placeholder="Password" path="password" />
-					<form:errors path="password" />
-				</div>
-				<button type="submit" class="btn btn-lg btn-success btn-block">로그인</button>
-			</fieldset>
-		</form:form> --%>

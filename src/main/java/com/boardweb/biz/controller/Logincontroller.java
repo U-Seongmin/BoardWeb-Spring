@@ -44,7 +44,7 @@ public class Logincontroller {
 			return mav;
 		}
 		
-		ModelAndView mav = new ModelAndView("redirect:/");
+		ModelAndView mav = new ModelAndView("redirect:/board/boardList");
 		return mav;
 	}
 	
