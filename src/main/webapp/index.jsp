@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <title>Index</title>
-<style>
+<style type="text/css">
 body {
 	width: 100vw;
 	height: 100vh;

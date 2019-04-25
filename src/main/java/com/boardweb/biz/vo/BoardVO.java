@@ -1,5 +1,7 @@
 package com.boardweb.biz.vo;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.validation.constraints.Size;
 
@@ -15,6 +17,24 @@ public class BoardVO {
 	@Column
     @Size(min=1, message="내용을 입력해주세요")
 	private String content;
+	private Date regDate;
+	private int cnt;
+
+	public int getCnt() {
+		return cnt;
+	}
+
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
+
+	public Date getRegDate() {
+		return regDate;
+	}
+
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
 
 	public String getTitle() {
 		return title;

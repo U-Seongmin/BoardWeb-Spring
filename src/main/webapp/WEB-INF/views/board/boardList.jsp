@@ -137,10 +137,11 @@ div.title{
 </head>
 <body>
 	<div class="main">
-
 		<form id="boardForm" name="boardForm" method="post">
 			<div class="title">
 				<h1>게시판</h1>
+				<button type="button"
+					onclick="location.href='/'" class="btn">로그아웃</button>
 			</div>
 			<div>
 				<button type="button"
