@@ -9,6 +9,7 @@ import org.hibernate.annotations.Entity;
 
 @Entity
 public class BoardVO {
+	private int serial;
 	@Column
     @Size(min=1, message="제목을 입력해주세요")
 	private String title;
@@ -22,6 +23,14 @@ public class BoardVO {
 
 	public int getCnt() {
 		return cnt;
+	}
+
+	public int getSerial() {
+		return serial;
+	}
+
+	public void setSerial(int serial) {
+		this.serial = serial;
 	}
 
 	public void setCnt(int cnt) {

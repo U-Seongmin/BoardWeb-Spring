@@ -61,4 +61,28 @@ public class BoardController {
 		mav.addObject("board",board);
 		return mav;
 	}
+	
+	@RequestMapping(value="/board/updateBoard", method = RequestMethod.GET)
+    public ModelAndView boardUpdate(HttpServletRequest request) throws Exception {
+		BoardVO board = boardService.detailBoard(Integer.parseInt(request.getParameter("seq")));
+        ModelAndView mav = new ModelAndView("/board/boardUpdate");
+        mav.addObject("board",board);
+        mav.addObject("boardVO", new BoardVO());
+        return mav;
+    }
+	
+	@RequestMapping(value = "/board/updateBoard", method = RequestMethod.POST)
+	public ModelAndView updateBoard(@Valid BoardVO boardVO, BindingResult bindingResult)throws Exception{
+		boardVO.setSerial(35);
+		ModelAndView mav = new ModelAndView("redirect:/board/boardDetail?seq="+boardVO.getSerial());
+		boardService.updateBoard(boardVO);
+		return mav;
+	}
+	
+	@RequestMapping(value = "/board/deleteBoard", method = RequestMethod.GET)
+	public ModelAndView deleteBoard(HttpServletRequest request) throws Exception{
+		boardService.deleteBoard(Integer.parseInt(request.getParameter("seq")));
+		ModelAndView mav = new ModelAndView("redirect:/board/boardList");
+		return mav;
+	}
 }

@@ -9,7 +9,8 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	background-image: url("./resources/background.png");
+	background-image:
+		url("https://scontent-icn1-1.xx.fbcdn.net/v/t1.15752-0/p480x480/58373062_2046561135441630_4511183757931184128_n.png?_nc_cat=100&_nc_ht=scontent-icn1-1.xx&oh=a34400fa979b447df154700535b22078&oe=5D3A6C03");
 	background-size: 100vw;
 	background-position: center;
 	-webkit-backdrop-filter: blur(10px);

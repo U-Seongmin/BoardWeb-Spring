@@ -56,5 +56,27 @@
 				
 		]]>	
 	</update>
+	
+	<update id="updateBoard">
+		<![CDATA[
+			UPDATE
+				board
+			SET
+				title = #{title},
+				content = #{content}
+			WHERE
+				serial = #{serial}
+		]]>
+	</update>
 
+	<delete id="deleteBoard">
+		<![CDATA[
+			DELETE
+				*
+			FROM
+				board
+			WHERE
+				serial = #{serial}
+		]]>
+	</delete>
 </mapper>

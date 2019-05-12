@@ -141,7 +141,7 @@ div.title{
 			<div class="title">
 				<h1>게시판</h1>
 				<button type="button"
-					onclick="location.href='/'" class="btn">로그아웃</button>
+					onclick="location.href='/BoardWeb/logout'" class="btn">로그아웃</button>
 			</div>
 			<div>
 				<button type="button"

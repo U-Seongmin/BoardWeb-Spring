@@ -25,5 +25,13 @@ public class BoardDAO extends AbstractDAO {
 		update("board.upCntBoard", serial);
 		return (BoardVO)selectOne("board.selectBoard", serial);
 	}
+	
+	public void updateBoard(BoardVO boardVO) {
+		update("board.updateBoard", boardVO);
+	}
+	
+	public void deleteBoard(int serial) {
+		delete("board.deleteBoard", serial);
+	}
 
 }

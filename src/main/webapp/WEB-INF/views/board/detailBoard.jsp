@@ -61,8 +61,8 @@ p.meta{
             <p class="textarea">${board.content }</p>
         </div>
         <div class="func">
-            <a href="#" class="btn" role="button">수정</a>
-            <a href="#" class="btn" role="button">삭제</a>
+            <a href="/BoardWeb/board/updateBoard?seq=${board.serial }" class="btn" role="button">수정</a>
+            <a href="/BoardWeb/board/deleteBoard?seq=${board.serial }" class="btn" role="button">삭제</a>
         </div>
         <div class="card-body">
             <a href='<c:url value='/board/boardList'/>' class="btn" role="button">목록으로</a>

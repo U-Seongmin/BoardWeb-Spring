@@ -13,4 +13,8 @@ public interface BoardService {
 	void insertBoard(BoardVO boardVO);
 	
 	BoardVO detailBoard(int serial);
+	
+	void updateBoard(BoardVO boardVO);
+	
+	void deleteBoard(int serial);
 }

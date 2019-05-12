@@ -31,12 +31,11 @@ div.main {
 </head>
 <body>
 	<form:form role="form" commandName="boardVO"
-		action="/BoardWeb/board/insertBoard" method="post">
+		action="/BoardWeb/board/updateBoard" method="post">
 		<form:input type="text" class="form-control" placeholder="TITLE"
-			path="title" />
+			value="${board.title }" path="title" />
 		<form:errors path="title" />
-		<form:hidden value="${authInfo.name }" path="writer" />
-		<form:errors path="writer" />
+		<form:input value="${board.serial }" path="serial" />
 		<form:textarea class="form-control" placeholder="content"
 			path="content" />
 		<form:errors path="content" />
