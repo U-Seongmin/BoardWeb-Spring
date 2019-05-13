@@ -73,8 +73,7 @@ public class BoardController {
 	
 	@RequestMapping(value = "/board/updateBoard", method = RequestMethod.POST)
 	public ModelAndView updateBoard(@Valid BoardVO boardVO, BindingResult bindingResult)throws Exception{
-		boardVO.setSerial(35);
-		ModelAndView mav = new ModelAndView("redirect:/board/boardDetail?seq="+boardVO.getSerial());
+		ModelAndView mav = new ModelAndView("redirect:/board/detailBoard?seq="+boardVO.getSerial());
 		boardService.updateBoard(boardVO);
 		return mav;
 	}

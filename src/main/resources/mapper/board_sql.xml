@@ -72,7 +72,6 @@
 	<delete id="deleteBoard">
 		<![CDATA[
 			DELETE
-				*
 			FROM
 				board
 			WHERE
